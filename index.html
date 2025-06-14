@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diwansh Giri | Computer Engineer & Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Diwansh Giri — Computer Engineer, Full-Stack Developer, and tech enthusiast specializing in modern web, systems, and software engineering.">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* your existing styles (unchanged) */
+        /* ... omitted for brevity ... */
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1>Diwansh Giri</h1>
+                <div>
+                    <span class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></span>
+                    <div class="toggle-wrapper">
+                        <label class="switch">
+              <input type="checkbox" id="dark-mode-toggle">
+              <span class="slider"></span>
+            </label>
+                    </div>
+                </div>
+            </div>
+            <p>Computer Engineer • Full-Stack Developer • Systems Thinker</p>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Interests</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about">
+        <div class="container">
+            <img src="profile.jpg" class="profile-pic" alt="Diwansh Giri">
+            <h2>About Me</h2>
+            <p>Hello! I'm <strong>Diwansh Giri</strong>, a Computer Engineer and passionate full-stack developer with a strong foundation in data structures, algorithms, and scalable web applications. I enjoy bridging the gap between efficient backend logic
+                and intuitive frontend interfaces. I'm also fascinated by system-level design, software architecture, and open-source tools.</p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skill-grid">
+                <div class="skill">HTML5 & CSS3</div>
+                <div class="skill">JavaScript (ES6+)</div>
+                <div class="skill">React.js & Next.js</div>
+                <div class="skill">Node.js & Express</div>
+                <div class="skill">MongoDB & SQL</div>
+                <div class="skill">Python & Flask</div>
+                <div class="skill">C/C++</div>
+                <div class="skill">Data Structures & Algorithms</div>
+                <div class="skill">Version Control (Git/GitHub)</div>
+                <div class="skill">RESTful APIs & JSON</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Dev Portfolio Website</h3>
+                    <p>A responsive personal portfolio to showcase projects and skills. Built with semantic HTML, modern CSS, and JavaScript animations.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Task Manager (MERN)</h3>
+                    <p>A full-stack task manager app with authentication, CRUD operations, and MongoDB Atlas integration for real-time productivity tracking.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>CodeBlog Platform</h3>
+                    <p>A blogging platform for engineers to share code snippets, using Node.js, Express, EJS templating, and MongoDB with REST APIs.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="interests">
+        <div class="container">
+            <h2>Technical Interests</h2>
+            <ul>
+                <li>Software Architecture & Design Patterns</li>
+                <li>Operating Systems & Compilers</li>
+                <li>Cloud Computing (AWS/GCP basics)</li>
+                <li>Open-Source Contributions</li>
+                <li>UI/UX Principles in Dev</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:diwanshgiri@gmail.com">diwanshgiri@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/diwansh-giri-7a9161331/" target="_blank">linkedin.com/in/DiwanshGiri</a></p>
+            <p>GitHub: <a href="https://github.com/DiwanshGiri" target="_blank">github.com/DiwanshGiri</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Diwansh Giri.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('dark-mode-toggle');
+        const html = document.documentElement;
+
+        toggle.addEventListener('change', () => {
+            html.setAttribute('data-theme', toggle.checked ? 'dark' : 'light');
+            localStorage.setItem('theme', toggle.checked ? 'dark' : 'light');
+        });
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            toggle.checked = savedTheme === 'dark';
+        }
+
+        function toggleMenu() {
+            const nav = document.getElementById('mobileNav');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>
